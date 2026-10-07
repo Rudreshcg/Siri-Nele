@@ -4,21 +4,100 @@ import './Hero.css';
 
 const Hero = () => {
   return (
-    <section className="hero">
-      <div className="hero-overlay"></div>
-      <div className="container hero-content">
-        <h1 className="hero-title fade-in-up">Siri Nele</h1>
-        <h2 className="hero-subtitle fade-in-up delay-100">Farm Lands, Villa's and Plots</h2>
-        <div className="hero-developer fade-in-up delay-200" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '10px', marginBottom: '2rem' }}>
-          <span>by</span>
-          <img src="/js logo round.png" alt="JS Constructions" style={{ height: '40px', background: 'white', borderRadius: '50%', padding: '2px' }} />
-          <span>JS Constructions</span>
+    <section className="hero-section">
+      <div className="hero-backdrop" />
+      <div className="hero-ambient-glow" />
+
+      <div className="container hero-container">
+        
+        {/* Prestige Eyebrow */}
+        <div className="hero-eyebrow fade-in-up">
+          <span className="eyebrow-sparkle">✦</span>
+          <span>Curated Eco-Luxury Farmlands & Country Villas</span>
+          <span className="eyebrow-sparkle">✦</span>
         </div>
-        <p className="hero-tagline fade-in-up delay-300">Where Nature Becomes Your Address.</p>
-        <div className="hero-actions fade-in-up delay-300">
-          <Link to="/vision" className="btn btn-primary">Discover More</Link>
-          <Link to="/contact" className="btn btn-accent">Book a Visit</Link>
+
+        {/* Hero Headings */}
+        <h1 className="hero-main-title fade-in-up delay-100">
+          Siri Nele
+        </h1>
+        
+        <p className="hero-subheading fade-in-up delay-200">
+          Where Nature Becomes Your Family's Eternal Legacy
+        </p>
+
+        {/* Developer Trust Badge */}
+        <div className="hero-dev-trust fade-in-up delay-200">
+          <span className="dev-trust-by">A Signature Development by</span>
+          <div className="dev-trust-brand">
+            <img src="/js logo round.png" alt="JS Constructions" className="dev-trust-logo" />
+            <span className="dev-trust-name">JS Constructions</span>
+          </div>
+          <span className="dev-trust-tag">• 18+ Years of Trust & Quality</span>
         </div>
+
+        {/* Call to Action Buttons */}
+        <div className="hero-cta-group fade-in-up delay-300">
+          <Link to="/contact" className="btn btn-gold btn-lg">
+            <span>Schedule Private Site Tour</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+              <line x1="5" y1="12" x2="19" y2="12"/>
+              <polyline points="12 5 19 12 12 19"/>
+            </svg>
+          </Link>
+
+          <Link to="/details" className="btn btn-glass btn-lg">
+            <span>Explore Masterplan & Pricing</span>
+          </Link>
+          
+          <a
+            href="/BROCHURE.pdf"
+            download="Siri_Nele_Brochure.pdf"
+            className="btn btn-outline-gold btn-lg"
+          >
+            <span>Download Brochure</span>
+          </a>
+        </div>
+
+        {/* Trust Metrics Bar */}
+        <div className="hero-metrics-bar fade-in-up delay-400">
+          <div className="metric-item">
+            <span className="metric-number">20+</span>
+            <span className="metric-unit">Acres</span>
+            <span className="metric-label">Verdant Gated Sanctuary</span>
+          </div>
+
+          <div className="metric-divider" />
+
+          <div className="metric-item">
+            <span className="metric-number">6,000–20k</span>
+            <span className="metric-unit">Sq.Ft</span>
+            <span className="metric-label">Customizable Farmland Plots</span>
+          </div>
+
+          <div className="metric-divider" />
+
+          <div className="metric-item">
+            <span className="metric-number">100%</span>
+            <span className="metric-unit">Clear</span>
+            <span className="metric-label">Freehold Title & RERA Compliant</span>
+          </div>
+
+          <div className="metric-divider" />
+
+          <div className="metric-item">
+            <span className="metric-number">15+</span>
+            <span className="metric-unit">Amenities</span>
+            <span className="metric-label">Clubhouse, Pool & Organic Farming</span>
+          </div>
+        </div>
+
+        {/* Scroll Indicator */}
+        <div className="hero-scroll-indicator">
+          <span>Scroll to Explore</span>
+          <div className="scroll-chevron">⌄</div>
+        </div>
+
       </div>
     </section>
   );
