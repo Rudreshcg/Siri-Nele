@@ -274,3 +274,9 @@
     border-radius: var(--radius-md);
   }
 }
+
+@media (max-width: 480px) {
+  .hero-metrics-bar {
+    grid-template-columns: 1fr;
+  }
+}

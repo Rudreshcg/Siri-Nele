@@ -354,7 +354,8 @@
   right: 0;
   width: 85%;
   max-width: 400px;
-  height: 100vh;
+  height: 100dvh;
+  max-height: 100%;
   background: #091a10;
   border-left: 1px solid rgba(197, 160, 89, 0.25);
   z-index: 2000;
@@ -511,8 +512,12 @@
    RESPONSIVE QUERIES
 ════════════════════════════════════════════════════════ */
 @media (max-width: 1080px) {
-  .brand-dev-badge {
+  .brand-dev-name {
     display: none;
+  }
+  .brand-dev-badge {
+    padding-left: 10px;
+    margin-left: 2px;
   }
 }
 
@@ -528,6 +533,9 @@
   }
   .btn-brochure {
     display: none;
+  }
+  .nav-cta-btn {
+    display: none !important;
   }
   .menu-toggle {
     display: flex;
@@ -552,10 +560,24 @@
   .brand-subline {
     font-size: 0.62rem;
   }
+  .brand-dev-avatar {
+    width: 28px;
+    height: 28px;
+  }
+  .brand-dev-badge {
+    padding-left: 8px;
+    margin-left: 0;
+  }
   .nav-cta-btn span {
     display: none;
   }
-  .nav-cta-btn {
-    padding: 0.65rem 0.9rem;
+}
+
+@media (max-width: 400px) {
+  .brand-subline {
+    display: none;
+  }
+  .nav-inner {
+    gap: 0.5rem;
   }
 }
